@@ -66,8 +66,7 @@ jobs:
           APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
         run: npm run make:mac
 
-      - name: Verify signed app when a certificate is configured
-        if: env.HAS_SIGNING_CERTIFICATE == 'true'
+      - name: Verify the merged Universal app signature
         run: |
           APP_PATH=$(find out -type d -name 'Latte Pet.app' -print -quit)
           test -n "$APP_PATH"

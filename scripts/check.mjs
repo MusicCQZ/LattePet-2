@@ -18,6 +18,7 @@ const files = [
   'src/renderer/walk-timing.js',
   'src/window-position.js',
   'scripts/smoke-runtime.mjs',
+  'scripts/strip-macos-signatures.cjs',
 ];
 
 for (const file of files) {
@@ -87,6 +88,12 @@ if (!macosWorkflow.includes('runs-on: macos-14')
   || !macosWorkflow.includes('npm run make:mac')
   || !macosWorkflow.includes('actions/upload-artifact@v4')) {
   throw new Error('The macOS CI workflow must build and upload universal Latte Pet distributables.');
+}
+
+const forgeConfigSource = await readFile(path.join(projectRoot, 'forge.config.js'), 'utf8');
+if (!forgeConfigSource.includes('afterExtract: [stripPrebuiltMacSignatures]')
+  || !forgeConfigSource.includes("identity: '-'")) {
+  throw new Error('Universal macOS builds must normalize prebuilt signatures and re-sign the merged app.');
 }
 
 const rendererSource = await readFile(path.join(projectRoot, 'src/renderer/renderer.js'), 'utf8');

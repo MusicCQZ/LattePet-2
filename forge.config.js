@@ -1,5 +1,6 @@
 const { FusesPlugin } = require('@electron-forge/plugin-fuses');
 const { FuseV1Options, FuseVersion } = require('@electron/fuses');
+const { stripPrebuiltMacSignatures } = require('./scripts/strip-macos-signatures.cjs');
 
 const hasSigningIdentity = Boolean(process.env.MAC_CODESIGN_IDENTITY);
 const hasNotarizationCredentials = Boolean(
@@ -8,9 +9,24 @@ const hasNotarizationCredentials = Boolean(
   && process.env.APPLE_TEAM_ID,
 );
 
+const macSigningConfig = hasSigningIdentity
+  ? { identity: process.env.MAC_CODESIGN_IDENTITY }
+  : {
+      // GitHub's hosted runner has no Developer ID certificate by default.
+      // Sign the merged bundle ad hoc so its nested code has one consistent
+      // signature; a supplied Developer ID still takes precedence above.
+      identity: '-',
+      identityValidation: false,
+      optionsForFile: () => ({
+        hardenedRuntime: false,
+        timestamp: 'none',
+      }),
+    };
+
 module.exports = {
   packagerConfig: {
     asar: true,
+    afterExtract: [stripPrebuiltMacSignatures],
     electronZipDir: process.env.ELECTRON_ZIP_DIR || undefined,
     executableName: 'LattePet',
     appBundleId: 'com.hatchpet.latte',
@@ -43,9 +59,7 @@ module.exports = {
       /^\/scripts($|\/)/,
       /\.prompt\.md$/,
     ],
-    osxSign: hasSigningIdentity
-      ? { identity: process.env.MAC_CODESIGN_IDENTITY }
-      : undefined,
+    osxSign: macSigningConfig,
     osxNotarize: hasNotarizationCredentials
       ? {
           tool: 'notarytool',
