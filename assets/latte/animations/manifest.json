@@ -1,0 +1,173 @@
+{
+  "version": 22,
+  "anchor": {
+    "horizontal": "center",
+    "vertical": "bottom",
+    "bottomMargin": 4
+  },
+  "baseImage": "../../assets/latte/previews/latte-base-normalized-v2.png",
+  "animations": {
+    "click": {
+      "frameDuration": 125,
+      "frames": [
+        "../../assets/latte/animations/click/frames-v4/frame-01.png",
+        "../../assets/latte/animations/click/frames-v4/frame-02.png",
+        "../../assets/latte/animations/click/frames-v4/frame-03.png",
+        "../../assets/latte/animations/click/frames-v4/frame-04.png",
+        "../../assets/latte/animations/click/frames-v4/frame-05.png",
+        "../../assets/latte/animations/click/frames-v4/frame-06.png"
+      ]
+    },
+    "pawWave": {
+      "frameDuration": 170,
+      "styleReference": "../../assets/latte/previews/latte-base-normalized-v2.png",
+      "frames": [
+        "../../assets/latte/animations/paw-wave/frames-v1/frame-01.png",
+        "../../assets/latte/animations/paw-wave/frames-v1/frame-02.png",
+        "../../assets/latte/animations/paw-wave/frames-v1/frame-03.png",
+        "../../assets/latte/animations/paw-wave/frames-v1/frame-04.png",
+        "../../assets/latte/animations/paw-wave/frames-v1/frame-05.png",
+        "../../assets/latte/animations/paw-wave/frames-v1/frame-06.png"
+      ]
+    },
+    "tailLook": {
+      "frameDuration": 170,
+      "styleReference": "../../assets/latte/previews/latte-base-normalized-v2.png",
+      "frames": [
+        "../../assets/latte/animations/tail-look/frames-v1/frame-01.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-02.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-03.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-04.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-05.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-06.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-07.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-08.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-09.png",
+        "../../assets/latte/animations/tail-look/frames-v1/frame-10.png"
+      ]
+    },
+    "walk": {
+      "frameDuration": 110,
+      "transitionFrameDuration": 140,
+      "speed": 70,
+      "styleReference": "../../assets/latte/previews/latte-base-normalized-v2.png",
+      "startFrames": [
+        "../../assets/latte/animations/walk/transition-v9/frame-01.png",
+        "../../assets/latte/animations/walk/transition-v9/frame-02.png",
+        "../../assets/latte/animations/walk/transition-v9/frame-03.png"
+      ],
+      "frames": [
+        "../../assets/latte/animations/walk/frames-v29/frame-01.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-02.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-03.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-04.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-05.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-06.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-07.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-08.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-09.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-10.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-11.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-12.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-13.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-14.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-15.png",
+        "../../assets/latte/animations/walk/frames-v29/frame-16.png"
+      ],
+      "stopFrames": [
+        "../../assets/latte/animations/walk/transition-v9/frame-03.png",
+        "../../assets/latte/animations/walk/transition-v9/frame-04.png",
+        "../../assets/latte/animations/walk/transition-v9/frame-05.png",
+        "../../assets/latte/animations/walk/transition-v9/frame-06.png"
+      ]
+    },
+    "sleep": {
+      "frameDuration": 280,
+      "frames": [
+        "../../assets/latte/animations/sleep/frames-v4/frame-01.png",
+        "../../assets/latte/animations/sleep/frames-v4/frame-02.png",
+        "../../assets/latte/animations/sleep/frames-v4/frame-03.png",
+        "../../assets/latte/animations/sleep/frames-v4/frame-04.png",
+        "../../assets/latte/animations/sleep/frames-v4/frame-05.png",
+        "../../assets/latte/animations/sleep/frames-v4/frame-06.png",
+        "../../assets/latte/animations/sleep/frames-v4/frame-07.png",
+        "../../assets/latte/animations/sleep/frames-v4/frame-08.png"
+      ]
+    },
+    "wake": {
+      "frameDuration": 380,
+      "styleReference": "../../assets/latte/previews/latte-base-normalized-v2.png",
+      "frames": [
+        "../../assets/latte/animations/sleep/frames-v4/frame-04.png",
+        "../../assets/latte/animations/wake/frames-v1/frame-02.png",
+        "../../assets/latte/animations/wake/frames-v1/frame-03.png"
+      ]
+    },
+    "stretch": {
+      "frameDuration": 160,
+      "frames": [
+        "../../assets/latte/animations/stretch/frames-v4/frame-01.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-02.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-03.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-04.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-05.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-06.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-07.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-08.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-09.png",
+        "../../assets/latte/animations/stretch/frames-v4/frame-10.png"
+      ]
+    },
+    "idleBlink": {
+      "frameDuration": 150,
+      "styleReference": "../../assets/latte/previews/latte-base-normalized-v2.png",
+      "frames": [
+        "../../assets/latte/animations/idle-blink/frames-v2/frame-01.png",
+        "../../assets/latte/animations/idle-blink/frames-v2/frame-02.png",
+        "../../assets/latte/animations/idle-blink/frames-v2/frame-03.png",
+        "../../assets/latte/animations/idle-blink/frames-v2/frame-04.png",
+        "../../assets/latte/animations/idle-blink/frames-v2/frame-05.png",
+        "../../assets/latte/animations/idle-blink/frames-v2/frame-06.png"
+      ]
+    },
+    "idleSniff": {
+      "frameDuration": 220,
+      "styleReference": "../../assets/latte/previews/latte-base-normalized-v2.png",
+      "frames": [
+        "../../assets/latte/animations/idle-sniff/frames-v2/frame-01.png",
+        "../../assets/latte/animations/idle-sniff/frames-v2/frame-02.png",
+        "../../assets/latte/animations/idle-sniff/frames-v2/frame-03.png",
+        "../../assets/latte/animations/idle-sniff/frames-v2/frame-04.png",
+        "../../assets/latte/animations/idle-sniff/frames-v2/frame-05.png",
+        "../../assets/latte/animations/idle-sniff/frames-v2/frame-06.png"
+      ]
+    },
+    "idleEarTail": {
+      "frameDuration": 180,
+      "styleReference": "../../assets/latte/previews/latte-base-normalized-v2.png",
+      "frames": [
+        "../../assets/latte/animations/idle-ear-tail/frames-v2/frame-01.png",
+        "../../assets/latte/animations/idle-ear-tail/frames-v2/frame-02.png",
+        "../../assets/latte/animations/idle-ear-tail/frames-v2/frame-03.png",
+        "../../assets/latte/animations/idle-ear-tail/frames-v2/frame-04.png",
+        "../../assets/latte/animations/idle-ear-tail/frames-v2/frame-05.png",
+        "../../assets/latte/animations/idle-ear-tail/frames-v2/frame-06.png"
+      ]
+    },
+    "feed": {
+      "frameDuration": 260,
+      "styleReference": "../../assets/latte/previews/latte-base-normalized-v2.png",
+      "frames": [
+        "../../assets/latte/previews/latte-base-normalized-v2.png",
+        "../../assets/latte/animations/feed/frames-v1/frame-02.png",
+        "../../assets/latte/animations/feed/frames-v1/frame-02.png",
+        "../../assets/latte/animations/feed/frames-v1/frame-02.png",
+        "../../assets/latte/animations/idle-sniff/frames-v2/frame-03.png",
+        "../../assets/latte/animations/idle-sniff/frames-v2/frame-04.png",
+        "../../assets/latte/animations/idle-ear-tail/frames-v2/frame-03.png",
+        "../../assets/latte/animations/idle-ear-tail/frames-v2/frame-04.png",
+        "../../assets/latte/previews/latte-base-normalized-v2.png"
+      ]
+    }
+  }
+}

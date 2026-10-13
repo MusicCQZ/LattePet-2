@@ -1,0 +1,213 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+body {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.pet-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 3% 2% 1%;
+}
+
+.pet-button {
+  /* One compact, fixed presentation area for every action at the app's 80% scale. */
+  width: 80%;
+  height: 72%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+  z-index: 1;
+  transform-origin: 52% 86%;
+  animation: idle-breathe 3.8s ease-in-out infinite;
+}
+
+.pet-button:active {
+  cursor: grabbing;
+}
+
+.pet-button.is-frame-animation {
+  animation: none;
+}
+
+.pet-button:focus-visible .pet-image {
+  filter: drop-shadow(0 0 7px rgb(255 184 77 / 75%));
+}
+
+.pet-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  filter: drop-shadow(0 5px 3px rgb(0 0 0 / 20%));
+  transform-origin: center bottom;
+}
+
+.pet-button.is-facing-left .pet-image {
+  transform: scaleX(-1);
+}
+
+.pet-button.click-reaction {
+  animation: click-look-up 820ms cubic-bezier(.22, .9, .3, 1);
+}
+
+.speech-bubble {
+  position: absolute;
+  z-index: 3;
+  top: 3%;
+  left: 50%;
+  min-width: 84px;
+  max-width: 76%;
+  padding: 8px 12px;
+  border: 1px solid rgb(116 83 55 / 22%);
+  border-radius: 15px;
+  background: rgb(255 250 241 / 94%);
+  color: #5b3c29;
+  font-size: clamp(12px, 4.2vw, 16px);
+  line-height: 1.25;
+  text-align: center;
+  box-shadow: 0 4px 14px rgb(62 42 28 / 18%);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 8px) scale(.96);
+  transition: opacity 160ms ease, transform 180ms ease;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -7px;
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid rgb(116 83 55 / 22%);
+  border-bottom: 1px solid rgb(116 83 55 / 22%);
+  background: rgb(255 250 241 / 94%);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.speech-bubble.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+}
+
+.snack {
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  left: 14%;
+  width: 35px;
+  height: 25px;
+  border: 2px solid #a2602f;
+  border-radius: 9px 10px 8px 10px;
+  background:
+    radial-gradient(circle at 25% 30%, #f8dc8c 0 2px, transparent 2.5px),
+    radial-gradient(circle at 72% 62%, #f8dc8c 0 2px, transparent 2.5px),
+    linear-gradient(145deg, #e9b866, #bb7137);
+  box-shadow: 0 3px 7px rgb(77 43 17 / 28%);
+  cursor: pointer;
+  touch-action: none;
+}
+
+.snack::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  bottom: 4px;
+  left: 5px;
+  border: 1px solid rgb(106 57 27 / 38%);
+  border-radius: 6px;
+}
+
+.snack-label {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  width: max-content;
+  color: #7b4d2c;
+  font-size: 11px;
+  font-weight: 600;
+  text-shadow: 0 1px 2px #fff8e9;
+  transform: translateX(-50%);
+}
+
+.carried-ball {
+  position: absolute;
+  z-index: 2;
+  right: 25%;
+  bottom: 25%;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #8d5136;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 30%, #fff4b3 0 11%, transparent 12%),
+    linear-gradient(135deg, #eeb04d 0 44%, #d95d43 45% 100%);
+  box-shadow: 0 2px 4px rgb(75 35 25 / 30%);
+  pointer-events: none;
+}
+
+@keyframes idle-breathe {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(-.25deg);
+  }
+}
+
+@keyframes click-look-up {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-8px) rotate(-4deg);
+  }
+  58% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pet-button,
+  .pet-button.click-reaction {
+    animation-duration: 1ms;
+    animation-iteration-count: 1;
+  }
+}

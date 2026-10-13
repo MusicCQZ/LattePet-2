@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>拿铁行走动画－逐帧腿部调试</title>
+    <link rel="stylesheet" href="./walk-review-v17.css">
+  </head>
+  <body data-mode="debug">
+    <main class="shell">
+      <h1>逐帧腿部调试</h1>
+      <p class="summary">轨迹线标出四条腿的固定身份；实心点表示支撑接地，空心点表示摆动或蹬地。</p>
+      <p class="status">正在加载…</p>
+      <div class="stage"><canvas id="preview" width="900" height="520"></canvas></div>
+      <div class="controls">
+        <button type="button" data-action="first">回到第 1 帧</button>
+        <button type="button" data-action="previous">上一帧</button>
+        <button type="button" data-action="next">下一帧</button>
+        <button type="button" data-action="toggle">慢速播放</button>
+      </div>
+      <div class="legend">
+        <span style="--color:#00a6ff">LF 左前腿（近侧）</span>
+        <span style="--color:#61c7f2">RF 右前腿（远侧）</span>
+        <span style="--color:#ff7a00">LH 左后腿（近侧）</span>
+        <span style="--color:#e2a400">RH 右后腿（远侧）</span>
+      </div>
+    </main>
+    <script src="./walk-review-v17.js"></script>
+  </body>
+</html>

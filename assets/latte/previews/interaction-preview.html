@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拿铁互动动作预览</title>
+    <style>
+      body { margin: 0; padding: 28px; background: #f5f0ea; color: #4f392b; font: 16px/1.45 system-ui, sans-serif; }
+      h1 { margin-top: 0; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+      article { padding: 14px; border-radius: 16px; background: #fffdf9; box-shadow: 0 3px 14px rgb(75 49 28 / 12%); }
+      h2 { margin: 0 0 4px; font-size: 18px; }
+      p { margin: 0; color: #725845; }
+      img { display: block; width: 100%; margin-top: 10px; background: conic-gradient(#eee 25%, #fff 0 50%, #eee 0 75%, #fff 0) 0 / 22px 22px; }
+    </style>
+  </head>
+  <body>
+    <h1>拿铁 · 点击互动预览</h1>
+    <div class="grid">
+      <article><h2>头部：眨眼</h2><p>轻触头部时，与歪头/耳朵反应交替。</p><img src="interaction-head-blink-v1.png" alt="拿铁眨眼"></article>
+      <article><h2>头部 / 身体：耳朵与尾巴</h2><p>用于耳朵轻抖或舒服地摇尾巴回应。</p><img src="interaction-ear-tail-v1.png" alt="拿铁抖耳朵摇尾巴"></article>
+      <article><h2>身体：伸懒腰</h2><p>轻触背部或身体时，与摇尾巴回应交替。</p><img src="interaction-stretch-v1.png" alt="拿铁伸懒腰"></article>
+      <article><h2>前爪：打招呼</h2><p>抬起近侧前爪，短暂停留后落回地面。</p><img src="interaction-paw-wave-v1.png" alt="拿铁抬前爪打招呼"></article>
+      <article><h2>尾巴：回头与摇尾巴</h2><p>先回头看向尾部，再恢复并轻摇尾巴。</p><img src="interaction-tail-look-v1.png" alt="拿铁回头看尾巴"></article>
+      <article><h2>连续点击：疑惑歪头</h2><p>900ms 内第三次点击只触发一次，不会堆叠。</p><img src="interaction-rapid-v1.png" alt="拿铁疑惑歪头"></article>
+    </div>
+  </body>
+</html>

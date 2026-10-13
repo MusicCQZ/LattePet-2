@@ -1,0 +1,85 @@
+name: Build macOS Latte Pet
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'assets/**'
+      - 'src/**'
+      - 'scripts/**'
+      - 'forge.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/macos-build.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  make-macos-universal:
+    name: macOS universal .app / DMG / ZIP
+    runs-on: macos-14
+    timeout-minutes: 30
+    env:
+      HAS_SIGNING_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE_BASE64 != '' }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate source
+        run: |
+          npm run check
+          npm test
+
+      - name: Import Developer ID certificate
+        if: env.HAS_SIGNING_CERTIFICATE == 'true'
+        env:
+          CERTIFICATE_BASE64: ${{ secrets.MACOS_CERTIFICATE_BASE64 }}
+          CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.MACOS_KEYCHAIN_PASSWORD }}
+        run: |
+          CERTIFICATE_PATH="$RUNNER_TEMP/latte-developer-id.p12"
+          KEYCHAIN_PATH="$RUNNER_TEMP/latte-build.keychain-db"
+          echo -n "$CERTIFICATE_BASE64" | base64 --decode > "$CERTIFICATE_PATH"
+          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+          security import "$CERTIFICATE_PATH" -P "$CERTIFICATE_PASSWORD" -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
+          security list-keychain -d user -s "$KEYCHAIN_PATH" login.keychain-db
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+      - name: Make universal macOS distributables
+        env:
+          MAC_CODESIGN_IDENTITY: ${{ secrets.MAC_CODESIGN_IDENTITY }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+        run: npm run make:mac
+
+      - name: Verify signed app when a certificate is configured
+        if: env.HAS_SIGNING_CERTIFICATE == 'true'
+        run: |
+          APP_PATH=$(find out -type d -name 'Latte Pet.app' -print -quit)
+          test -n "$APP_PATH"
+          codesign --verify --deep --strict --verbose=2 "$APP_PATH"
+
+      - name: Upload macOS distributables
+        uses: actions/upload-artifact@v4
+        with:
+          name: Latte-Pet-macos-universal
+          path: |
+            out/make/**/*.dmg
+            out/make/**/*.zip
+            out/Latte Pet-darwin-universal/Latte Pet.app
+          if-no-files-found: error
+          retention-days: 14

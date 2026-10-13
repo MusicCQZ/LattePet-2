@@ -1,0 +1,146 @@
+[
+    {
+        "Frame":  "frame-01.png",
+        "SourceBodySpan":  1023,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.34017595307917886,
+        "SourceBounds":  "72,434-1198,1208",
+        "OutputBounds":  "23,176-405,439",
+        "RemovedVisiblePixels":  18
+    },
+    {
+        "Frame":  "frame-02.png",
+        "SourceBodySpan":  1010,
+        "OutputBodySpan":  349,
+        "AppliedScale":  0.34455445544554453,
+        "SourceBounds":  "82,439-1210,1205",
+        "OutputBounds":  "22,175-410,439",
+        "RemovedVisiblePixels":  50
+    },
+    {
+        "Frame":  "frame-03.png",
+        "SourceBodySpan":  1056,
+        "OutputBodySpan":  349,
+        "AppliedScale":  0.32954545454545453,
+        "SourceBounds":  "70,386-1210,1197",
+        "OutputBounds":  "37,172-412,439",
+        "RemovedVisiblePixels":  55
+    },
+    {
+        "Frame":  "frame-04.png",
+        "SourceBodySpan":  1068,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.3258426966292135,
+        "SourceBounds":  "60,336-1226,1162",
+        "OutputBounds":  "35,170-413,439",
+        "RemovedVisiblePixels":  99
+    },
+    {
+        "Frame":  "frame-05.png",
+        "SourceBodySpan":  1071,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.32492997198879553,
+        "SourceBounds":  "77,360-1223,1194",
+        "OutputBounds":  "35,168-407,439",
+        "RemovedVisiblePixels":  7
+    },
+    {
+        "Frame":  "frame-06.png",
+        "SourceBodySpan":  1064,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.32706766917293234,
+        "SourceBounds":  "81,356-1219,1166",
+        "OutputBounds":  "33,174-405,439",
+        "RemovedVisiblePixels":  42
+    },
+    {
+        "Frame":  "frame-07.png",
+        "SourceBodySpan":  999,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.34834834834834832,
+        "SourceBounds":  "82,450-1200,1198",
+        "OutputBounds":  "19,178-408,439",
+        "RemovedVisiblePixels":  23
+    },
+    {
+        "Frame":  "frame-08.png",
+        "SourceBodySpan":  1020,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.3411764705882353,
+        "SourceBounds":  "102,360-1216,1138",
+        "OutputBounds":  "35,174-415,439",
+        "RemovedVisiblePixels":  35
+    },
+    {
+        "Frame":  "frame-09.png",
+        "SourceBodySpan":  1057,
+        "OutputBodySpan":  349,
+        "AppliedScale":  0.32923368022705773,
+        "SourceBounds":  "71,398-1225,1209",
+        "OutputBounds":  "32,172-412,439",
+        "RemovedVisiblePixels":  70
+    },
+    {
+        "Frame":  "frame-10.png",
+        "SourceBodySpan":  1051,
+        "OutputBodySpan":  347,
+        "AppliedScale":  0.33111322549952427,
+        "SourceBounds":  "75,374-1196,1193",
+        "OutputBounds":  "36,169-406,439",
+        "RemovedVisiblePixels":  87
+    },
+    {
+        "Frame":  "frame-11.png",
+        "SourceBodySpan":  1011,
+        "OutputBodySpan":  349,
+        "AppliedScale":  0.34421364985163205,
+        "SourceBounds":  "105,440-1219,1201",
+        "OutputBounds":  "25,177-408,439",
+        "RemovedVisiblePixels":  23
+    },
+    {
+        "Frame":  "frame-12.png",
+        "SourceBodySpan":  1043,
+        "OutputBodySpan":  349,
+        "AppliedScale":  0.33365292425695109,
+        "SourceBounds":  "55,342-1225,1167",
+        "OutputBounds":  "32,164-422,439",
+        "RemovedVisiblePixels":  241
+    },
+    {
+        "Frame":  "frame-13.png",
+        "SourceBodySpan":  1069,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.32553788587464921,
+        "SourceBounds":  "43,363-1230,1156",
+        "OutputBounds":  "32,181-417,439",
+        "RemovedVisiblePixels":  220
+    },
+    {
+        "Frame":  "frame-14.png",
+        "SourceBodySpan":  1034,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.3365570599613153,
+        "SourceBounds":  "81,445-1219,1219",
+        "OutputBounds":  "25,178-407,439",
+        "RemovedVisiblePixels":  69
+    },
+    {
+        "Frame":  "frame-15.png",
+        "SourceBodySpan":  1010,
+        "OutputBodySpan":  348,
+        "AppliedScale":  0.34455445544554453,
+        "SourceBounds":  "57,420-1221,1183",
+        "OutputBounds":  "15,176-416,439",
+        "RemovedVisiblePixels":  15
+    },
+    {
+        "Frame":  "frame-16.png",
+        "SourceBodySpan":  1024,
+        "OutputBodySpan":  349,
+        "AppliedScale":  0.33984375,
+        "SourceBounds":  "54,422-1218,1195",
+        "OutputBounds":  "12,177-407,439",
+        "RemovedVisiblePixels":  39
+    }
+]

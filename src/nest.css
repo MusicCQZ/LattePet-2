@@ -1,0 +1,49 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+#pet-nest {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #8e6042;
+  border-radius: 50%;
+  background:
+    repeating-linear-gradient(25deg, rgb(158 104 65 / 28%) 0 3px, transparent 3px 7px),
+    linear-gradient(#e9c38d, #bb7a4d);
+  box-shadow: inset 0 7px 10px rgb(255 242 204 / 38%), inset 0 -7px 9px rgb(87 48 30 / 26%), 0 4px 8px rgb(72 40 23 / 28%);
+  cursor: grab;
+  touch-action: none;
+}
+
+#pet-nest::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  right: 12%;
+  bottom: 19%;
+  left: 12%;
+  border: 2px solid rgb(116 71 43 / 55%);
+  border-radius: 50%;
+  background: linear-gradient(160deg, #f5dfba, #d79d6b);
+}
+
+.nest-cushion {
+  position: absolute;
+  z-index: 1;
+  top: 36%;
+  right: 25%;
+  bottom: 32%;
+  left: 25%;
+  border-radius: 50%;
+  background: rgb(255 243 216 / 48%);
+}
+
+#pet-nest:active {
+  cursor: grabbing;
+}

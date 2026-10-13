@@ -1,0 +1,94 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", "PingFang SC", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  background: #e9e1d5;
+  color: #473327;
+}
+
+.shell {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 22px;
+  border-radius: 20px;
+  background: #fffaf2;
+  box-shadow: 0 18px 48px rgb(73 48 31 / 18%);
+}
+
+h1 { margin: 0; font-size: 24px; }
+
+.summary,
+.status { margin: 8px 0 0; color: #765844; }
+
+.status { font-variant-numeric: tabular-nums; }
+
+.stage {
+  position: relative;
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid #cdbba8;
+  border-radius: 14px;
+  background-color: #fff;
+  background-image:
+    linear-gradient(45deg, #e2ded8 25%, transparent 25%),
+    linear-gradient(-45deg, #e2ded8 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e2ded8 75%),
+    linear-gradient(-45deg, transparent 75%, #e2ded8 75%);
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+  background-size: 24px 24px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid #b99b84;
+  border-radius: 10px;
+  background: #fff;
+  color: #473327;
+  cursor: pointer;
+}
+
+button:hover { background: #f8eadc; }
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 13px;
+  font-size: 14px;
+}
+
+.legend span::before {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: var(--color);
+  content: "";
+}
+
+@media (max-width: 680px) {
+  body { padding: 10px; }
+  .shell { padding: 14px; }
+  h1 { font-size: 20px; }
+}

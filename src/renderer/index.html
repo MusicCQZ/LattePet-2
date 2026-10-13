@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self';"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拿铁桌宠</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="pet-stage" aria-label="拿铁桌宠">
+      <div id="speech-bubble" class="speech-bubble" role="status" aria-live="polite"></div>
+      <button id="snack" class="snack" type="button" hidden aria-label="喂拿铁一块小饼干">
+        <span class="snack-label">小饼干</span>
+      </button>
+      <div id="carried-ball" class="carried-ball" hidden aria-hidden="true"></div>
+      <button id="pet-button" class="pet-button" type="button" aria-label="摸摸拿铁">
+        <img
+          id="pet-image"
+          class="pet-image"
+          src="../../assets/latte/previews/latte-base-normalized-v2.png"
+          alt="拿铁，一只白底棕色、卷尾的小狗"
+          draggable="false"
+        >
+      </button>
+    </main>
+    <script src="./walk-timing.js"></script>
+    <script src="./interaction-mapping.js"></script>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

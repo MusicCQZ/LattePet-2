@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "canvas": { "width": 444, "height": 444, "groundY": 439 },
+  "direction": "right",
+  "frameDuration": 110,
+  "cycleDuration": 1760,
+  "footfallOrder": ["LH", "LF", "RH", "RF"],
+  "calibration": {
+    "renderScaleAt100Percent": 1.1,
+    "sourceToScreenScale": 0.6704,
+    "sourcePixelsPerSecond": 104.42,
+    "windowPixelsPerSecond": 70,
+    "windowPixelsPerFrame": 7.7,
+    "windowPixelsPerCycle": 123.2
+  },
+  "limbs": {
+    "LF": { "name": "左前腿（近侧）", "color": "#00a6ff" },
+    "RF": { "name": "右前腿（远侧）", "color": "#8ed9ff" },
+    "LH": { "name": "左后腿（近侧）", "color": "#ff7a00" },
+    "RH": { "name": "右后腿（远侧）", "color": "#ffd166" }
+  },
+  "frames": [
+    { "phase": "LH 落地", "paws": { "LF": [335, 395, "swing"], "RF": [266, 439, "stance"], "LH": [151, 439, "stance"], "RH": [64, 439, "stance"] } },
+    { "phase": "LH 承重", "paws": { "LF": [344, 404, "swing"], "RF": [254, 439, "stance"], "LH": [145, 439, "stance"], "RH": [72, 433, "toeoff"] } },
+    { "phase": "RH 抬脚", "paws": { "LF": [353, 420, "swing"], "RF": [242, 439, "stance"], "LH": [137, 439, "stance"], "RH": [92, 412, "swing"] } },
+    { "phase": "LF 准备落地", "paws": { "LF": [357, 433, "swing"], "RF": [235, 431, "toeoff"], "LH": [126, 439, "stance"], "RH": [116, 394, "swing"] } },
+    { "phase": "LF 落地", "paws": { "LF": [347, 439, "stance"], "RF": [243, 412, "swing"], "LH": [114, 439, "stance"], "RH": [144, 386, "swing"] } },
+    { "phase": "LF 承重", "paws": { "LF": [336, 439, "stance"], "RF": [260, 394, "swing"], "LH": [101, 439, "stance"], "RH": [166, 388, "swing"] } },
+    { "phase": "RH 前摆", "paws": { "LF": [322, 439, "stance"], "RF": [282, 384, "swing"], "LH": [88, 439, "stance"], "RH": [181, 400, "swing"] } },
+    { "phase": "LH 蹬地", "paws": { "LF": [310, 439, "stance"], "RF": [305, 386, "swing"], "LH": [75, 433, "toeoff"], "RH": [184, 421, "swing"] } },
+    { "phase": "RH 落地", "paws": { "LF": [298, 439, "stance"], "RF": [328, 398, "swing"], "LH": [70, 421, "swing"], "RH": [176, 439, "stance"] } },
+    { "phase": "RH 承重", "paws": { "LF": [286, 439, "stance"], "RF": [346, 414, "swing"], "LH": [90, 399, "swing"], "RH": [164, 439, "stance"] } },
+    { "phase": "LH 抬脚", "paws": { "LF": [274, 439, "stance"], "RF": [354, 430, "swing"], "LH": [116, 388, "swing"], "RH": [151, 439, "stance"] } },
+    { "phase": "RF 准备落地", "paws": { "LF": [268, 431, "toeoff"], "RF": [350, 436, "swing"], "LH": [142, 386, "swing"], "RH": [137, 439, "stance"] } },
+    { "phase": "RF 落地", "paws": { "LF": [282, 407, "swing"], "RF": [340, 439, "stance"], "LH": [166, 397, "swing"], "RH": [122, 439, "stance"] } },
+    { "phase": "RF 承重", "paws": { "LF": [300, 390, "swing"], "RF": [322, 439, "stance"], "LH": [178, 414, "swing"], "RH": [105, 439, "stance"] } },
+    { "phase": "LH 前摆", "paws": { "LF": [319, 386, "swing"], "RF": [302, 439, "stance"], "LH": [170, 430, "swing"], "RH": [86, 439, "stance"] } },
+    { "phase": "循环接缝", "paws": { "LF": [330, 390, "swing"], "RF": [283, 439, "stance"], "LH": [160, 436, "swing"], "RH": [70, 439, "stance"] } }
+  ]
+}
